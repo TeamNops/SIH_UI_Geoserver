@@ -36,8 +36,9 @@
   <div id="map"></div>
 
   <script type="text/javascript">
-    // Default BBOX
-    var bbox = [70, 15, 90, 30];
+   // Full view BBOX for India, ensuring its entirety is visible
+var bbox = [65.0, 5.0, 100.0, 38.0];
+
 
     // Define the map bounds
     var bounds = [
@@ -60,6 +61,7 @@
     // Add GeoServer WMS layer
     var tirLayer = L.tileLayer.wms('http://localhost:8080/geoserver/Sample_Visible/wms', {
       layers: 'Sample_Visible:3RIMG_01NOV2024_0015_L1C_ASIA_MER_V01R00_IMG_TIR1',
+      //layers:'Sample_Visible:3RIMG_14OCT2024_0015_L1B_STD_V01R00_IMG_VIS',
       format: 'image/png',
       transparent: true,
       opacity: 0.5,
