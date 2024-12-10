@@ -15,8 +15,8 @@ def fetch_wms_image(
     geoserver_url: str,
     layers: str,
     bbox: str,
-    width: int = 512,
-    height: int = 512,
+    width: int = 1024,
+    height: int = 1024,
     image_format: str = "image/png"
 ) -> str:
     """
